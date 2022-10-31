@@ -4,6 +4,7 @@ import { ThemeContext} from '../GlobalComponents/ThemeProvider';
 import {BiSun, BiMoon, BiCart} from 'react-icons/bi';
 import { Link } from "@reach/router";
 import { useCart } from "react-use-cart"; 
+import OnAdd from './OnAdd'
 
 const Header = (onAdd) => {
     const {theme, setThemeMode} = useContext(ThemeContext);
@@ -26,7 +27,7 @@ const Header = (onAdd) => {
       <Container>
         <Link to="/">
         <Navbar.Brand className={darkMode? 'text-dark-primary': 'text-light-primary'}>
-            <b>Simple-ecart</b>
+            <b>E-EXPRESS</b>
             </Navbar.Brand>
         </Link>
        

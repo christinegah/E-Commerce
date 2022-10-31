@@ -32,15 +32,15 @@ const AddProduct = ({ onAdd}) => {
               <label>title</label> 
               <input type='text' placeholder='Add title'
                value={title} onChange={(e) =>
-                setTitle(e.target.value)}/>   
+                setTitle(e.target.value)}     />   
            </div>
            <div className='form-control'>
               <label>price</label> 
               <input type='text' placeholder='Add Price'
                value={price} onChange={(e) =>
-                setPrice(e.target.value)}/>   
+                setPrice(e.target.value)}     />   
            </div>
-           <Button>Add Product</Button>
+        <input type='submit' value='Add product'  />
         </form>
     )
 }
