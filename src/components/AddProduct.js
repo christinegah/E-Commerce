@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 
+
 const AddProduct = ({ onAdd}) => {
     const [product, setProduct] = useState('')
     const [title, setTitle] = useState('')
@@ -20,8 +21,10 @@ const AddProduct = ({ onAdd}) => {
         setPrice('')
     }
     return (
-        <form style={{ marginTop: '4rem', width: '50%', marginLeft: '50%'}} className='add-form' onSubmit=
+        <div className="main">
+        <form style={{ marginTop: '8rem', width: '50%', marginLeft: '2 0%', position: "absolute"}} className='add-form' onSubmit=
         {onSubmit}>
+            
            <div className='form-control'>
               <label>Product</label> 
               <input type='text' placeholder='Add Product'
@@ -34,14 +37,18 @@ const AddProduct = ({ onAdd}) => {
                value={title} onChange={(e) =>
                 setTitle(e.target.value)}     />   
            </div>
-           <div className='form-control'>
+           <div className='form-control' >
               <label>price</label> 
-              <input type='text' placeholder='Add Price'
+              <input type='number' placeholder='Add Price'
                value={price} onChange={(e) =>
                 setPrice(e.target.value)}     />   
            </div>
-        <input type='submit' value='Add product'  />
+
+           
+        <Button color="green" type='submit' value='Save' className='btn btn-block'>Save</Button>
         </form>
+        </div>
+        
     )
 }
 

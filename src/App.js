@@ -28,15 +28,18 @@ function App() {
        setProducts([...products, newProduct])
   }
   return (
-    <main className={theme? 'bg-black': 'bg-light-2'} style={{ height: '100vh', overflowY: 'auto'}}>
+    <div className='container'>
     <Header onAdd={() => setShowAddProduct
     (!showAddProduct)}/>
-    {showAddProduct && <AddProduct onAdd={addProduct}/>}
+   
+    {showAddProduct && <AddProduct onAdd={addProduct} />
+    }
+   
     <Router>
       <Home path="/"/>
       <Cart path="/cart"/>
     </Router>
-    </main>
+    </div>
   );
 }
 

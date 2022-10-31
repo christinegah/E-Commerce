@@ -6,7 +6,7 @@ import { Link } from "@reach/router";
 import { useCart } from "react-use-cart"; 
 import OnAdd from './OnAdd'
 
-const Header = ({ onAdd }) => {
+const Header = ({onAdd,showAdd }) => {
     const {theme, setThemeMode} = useContext(ThemeContext);
     const [darkMode, setDarkMode] = useState(theme);
 
@@ -22,7 +22,7 @@ const Header = ({ onAdd }) => {
         <Navbar collapseOnSelect expand="md"
         variant={darkMode? 'dark':'light'}
         className={darkMode? 'bg-light-black border-bottom':'bg-light border-bottom'}
-        style={{ width: '100%', position: 'fixed', zIndex: 100}}
+        style={{ width: '100%', marginLeft: '-9%' , position: 'fixed', zIndex: 100}}
         >
       <Container>
         <Link to="/">
@@ -49,10 +49,9 @@ const Header = ({ onAdd }) => {
                <span style={{ marginLeft: !isEmpty ? '-13px': 0}}>Cart</span>
                 </Link>
                 
-        
-            <OnAdd  product='Add' onClick = {onAdd}   />
-            
-        
+         <Link to="/AddProduct">
+            <Button text={showAdd ? 'close' : 'Add'} onClick ={onAdd}>Add </Button>           
+            </Link>
            
           </Nav>
          
