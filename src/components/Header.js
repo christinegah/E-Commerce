@@ -6,7 +6,7 @@ import { Link } from "@reach/router";
 import { useCart } from "react-use-cart"; 
 import OnAdd from './OnAdd'
 
-const Header = (onAdd) => {
+const Header = ({ onAdd }) => {
     const {theme, setThemeMode} = useContext(ThemeContext);
     const [darkMode, setDarkMode] = useState(theme);
 
@@ -50,7 +50,7 @@ const Header = (onAdd) => {
                 </Link>
                 
         
-            <Button onClick={onAdd}>Add</Button>
+            <OnAdd  product='Add' onClick = {onAdd}   />
             
         
            
