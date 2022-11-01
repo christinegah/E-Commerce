@@ -10,8 +10,6 @@ import AddProduct from './components/AddProduct';
 //Pages
 import Home from './Pages/Home';
 import Cart from './Pages/Cart';
-
-
 function App() {
   const [showAddProduct, setShowAddProduct] = useState(false)
   const [ products, setProducts] = useState([{
@@ -30,7 +28,7 @@ function App() {
   return (
     <div className='container'>
     <Header onAdd={() => setShowAddProduct
-    (!showAddProduct)}/>
+    (!showAddProduct)} showAdd={showAddProduct} />
    
     {showAddProduct && <AddProduct onAdd={addProduct} />
     }

@@ -1,6 +1,9 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button,Container } from "react-bootstrap";
+
 import { useState } from "react";
+
+
 
 
 const AddProduct = ({ onAdd}) => {
@@ -21,8 +24,11 @@ const AddProduct = ({ onAdd}) => {
         setPrice('')
     }
     return (
-        <div className="main">
-        <form style={{ marginTop: '8rem', width: '50%', marginLeft: '2 0%', position: "absolute"}} className='add-form' onSubmit=
+     
+        <Container style={{ marginTop: '10rem', width: '40%', marginLeft: '15%',height: '60%', backgroundColor: '#635858',position: "absolute",borderBlock: '5rem'}}>
+            <h1 style={{position: "absolute",marginLeft: "6rem",}}>Add new form</h1>
+        
+        <form style={{ marginTop: '5rem', width: '50%', marginLeft: '20%',position: "absolute"}} className='add-form' onSubmit=
         {onSubmit}>
             
            <div className='form-control'>
@@ -32,23 +38,23 @@ const AddProduct = ({ onAdd}) => {
               setProduct(e.target.value)}/>   
            </div>
            <div className='form-control'>
-              <label>title</label> 
+              <label>Title</label> 
               <input type='text' placeholder='Add title'
                value={title} onChange={(e) =>
                 setTitle(e.target.value)}     />   
            </div>
            <div className='form-control' >
-              <label>price</label> 
+              <label>Price</label> 
               <input type='number' placeholder='Add Price'
                value={price} onChange={(e) =>
                 setPrice(e.target.value)}     />   
            </div>
 
            
-        <Button color="green" type='submit' value='Save' className='btn btn-block'>Save</Button>
+        <Button color="green" type='submit' value='Save' className='btn btn-block' >Save</Button>
         </form>
-        </div>
-        
+      
+        </Container>
     )
 }
 

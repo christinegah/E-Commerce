@@ -3,7 +3,7 @@
   background-color: black;
 }
 .bg-light-black{
-  background-color: #262626 !important;
+  background-color: #635858 !important;
 }
 .text-black{
   color: black;
@@ -30,4 +30,12 @@
 }
 .text-light-primary{
   color: #191659 !important;
+}
+
+
+
+.main{
+  background-color: aquamarine;
+  width: 70%;
+  height: 80%;
 }
