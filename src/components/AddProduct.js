@@ -31,27 +31,28 @@ const AddProduct = ({ onAdd}) => {
         <form style={{ marginTop: '5rem', width: '50%', marginLeft: '20%',position: "absolute"}} className='add-form' onSubmit=
         {onSubmit}>
             
-           <div className='form-control'>
+           <div style={{padding: "1rem"}} >
               <label>Product</label> 
               <input type='text' placeholder='Add Product'
               value={product} onChange={(e) =>
               setProduct(e.target.value)}/>   
            </div>
-           <div className='form-control'>
+           <div >
               <label>Title</label> 
               <input type='text' placeholder='Add title'
                value={title} onChange={(e) =>
                 setTitle(e.target.value)}     />   
            </div>
-           <div className='form-control' >
+           <div  >
               <label>Price</label> 
               <input type='number' placeholder='Add Price'
                value={price} onChange={(e) =>
                 setPrice(e.target.value)}     />   
            </div>
 
-           
+           <div style={{padding: "1rem",marginTop: "10%"}}>
         <Button color="green" type='submit' value='Save' className='btn btn-block' >Save</Button>
+        </div>
        </form>
       
         </Container>
