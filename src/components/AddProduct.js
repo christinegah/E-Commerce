@@ -52,7 +52,7 @@ const AddProduct = ({ onAdd}) => {
 
            
         <Button color="green" type='submit' value='Save' className='btn btn-block' >Save</Button>
-        </form>
+       </form>
       
         </Container>
     )
